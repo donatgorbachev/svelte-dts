@@ -51,7 +51,7 @@ class Generator {
         [
           {
             script: ({ content, attributes }) => {
-              if (attributes.lang === 'ts') {
+              if (attributes.lang === 'ts' || attributes.type === 'ts') {
                 scriptTsContent = content;
 
                 const resultTranspile = ts.transpileModule(content, {
